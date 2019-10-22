@@ -1,2 +1,1 @@
-# image-host
-Image Host
+# Github Image Hosting
