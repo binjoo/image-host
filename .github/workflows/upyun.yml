@@ -1,0 +1,27 @@
+# .github/workflows/upyun.yml
+name: upyun
+
+on:
+  workflow_dispatch:
+
+jobs:
+  douban:
+    name: upyun data sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: movie
+        uses: binjoo/action@main
+        with:
+          dir: ${{ secrets.UPYUN_DIR }}
+          bucket: ${{ secrets.UPYUN_BUCKET }}
+          username: ${{ secrets.UPYUN_USERNAME }}
+          password: ${{ secrets.UPYUN_PASSWORD }}
+
+      - name: Commit
+        uses: EndBug/add-and-commit@v9.1.4
+        with:
+          message: "chore: update upyun data"
+          add: "./"
