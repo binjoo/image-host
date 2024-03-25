@@ -15,10 +15,10 @@ jobs:
       - name: movie
         uses: binjoo/action@main
         with:
-          dir: ${{ secrets.UPYUN_DIR }}
-          bucket: ${{ secrets.UPYUN_BUCKET }}
-          username: ${{ secrets.UPYUN_USERNAME }}
-          password: ${{ secrets.UPYUN_PASSWORD }}
+          upyun_dir: ${{ secrets.UPYUN_DIR }}
+          upyun_bucket: ${{ secrets.UPYUN_BUCKET }}
+          upyun_username: ${{ secrets.UPYUN_USERNAME }}
+          upyun_password: ${{ secrets.UPYUN_PASSWORD }}
 
       - name: Commit
         uses: EndBug/add-and-commit@v9.1.4
