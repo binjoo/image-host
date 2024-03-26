@@ -11,8 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        path: /box
 
-      - name: movie
+      - name: compare
         uses: binjoo/action@main
         with:
           upyun_dir: ${{ secrets.UPYUN_DIR }}
@@ -24,4 +25,4 @@ jobs:
         uses: EndBug/add-and-commit@v9.1.4
         with:
           message: "chore: update upyun data"
-          add: "./"
+          add: "./box"
