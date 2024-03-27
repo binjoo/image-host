@@ -3,7 +3,9 @@ name: upyun
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: "18 3 * * 3"
+    
 jobs:
   douban:
     name: upyun data sync
