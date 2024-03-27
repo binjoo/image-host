@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Compare
-        uses: binjoo/action@upyun2github
+        uses: binjoo/upyun2github@main
         with:
           upyun_dir: ${{ secrets.UPYUN_DIR }}
           upyun_bucket: ${{ secrets.UPYUN_BUCKET }}
@@ -23,7 +23,7 @@ jobs:
           upyun_password: ${{ secrets.UPYUN_PASSWORD }}
 
       - name: Commit
-        uses: EndBug/add-and-commit@v9.1.4
+        uses: EndBug/add-and-commit@v9
         with:
           message: "chore: update upyun data"
           add: "./"
