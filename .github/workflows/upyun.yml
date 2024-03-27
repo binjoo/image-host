@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Compare
-        uses: binjoo/action@main
+        uses: binjoo/action@upyun2github
         with:
           upyun_dir: ${{ secrets.UPYUN_DIR }}
           upyun_bucket: ${{ secrets.UPYUN_BUCKET }}
